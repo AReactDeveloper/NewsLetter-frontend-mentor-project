@@ -10,7 +10,7 @@ submitBtn.addEventListener('click',e=>{
     if(isValidEmail(email.value)){
         email.classList.remove('error-input')
         errorLabel.style.display = 'none'
-        window.location.href = '/sucess.html';
+        window.location.href = 'https://areactdeveloper.github.io/NewsLetter-frontend-mentor-project/sucess.html';
 
     }else{
         email.classList.add('error-input')
