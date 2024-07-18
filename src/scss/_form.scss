@@ -1,0 +1,35 @@
+.form-group{
+    display: grid;
+    gap: 20px;
+    & > *{
+        display: block;
+        width: 100%;
+    }
+    &-labels{
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: 900;
+        &-errorLabel{
+            color: var(--clr-orange);
+        }
+    }
+    
+    & input{
+        padding: 15px;
+        color: var(--clr-darker-gray);
+        border-radius: 10px;
+        border:1px solid #999;
+        &:focus,&:active{
+            border:1px solid #999;
+        }
+        &.error-input{
+            background-color: #ffe8e6;
+            color: var(--clr-orange);
+            border-color: var(--clr-orange);
+            &::placeholder{
+                color: var(--clr-orange);
+            }
+        }
+    }
+}

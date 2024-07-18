@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0"/>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/styles.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <script src="./dist/js/script.js" defer></script>
+</head>
+<body>
+<main class="wrapper">
+    <div class="newsletter-card">
+      <div class="newsletter-card__image">
+          <picture>
+            <source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 600px)" />
+            <img src="./assets/images/illustration-sign-up-desktop.svg"  alt="MDN" />
+          </picture>
+      </div>
+      <div class="newsletter-card__content">
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+product managers receiving monthly updates on : </p>
+        <ul>
+          <li>Product Discovery and building what matters</li>
+          <li>Mesuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="#">
+          <div class="form-group">
+            <div class="form-group-labels">
+              <label class="form-group-labels-emailLabel" for="email">Email adresse : </label>
+              <label class="form-group-labels-errorLabel display-none" for="email">Email must be valid</label>
+            </div>
+            <input  type="text" name="email" id="email" placeholder="youremail@mail.com"> 
+            <button class="button">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+</main>
+</body>
+</html>

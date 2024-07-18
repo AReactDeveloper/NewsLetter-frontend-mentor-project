@@ -1,0 +1,284 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --clr-orange: hsl(4, 100%, 67%);
+  --clr-blue:hsl(232, 31%, 20%);
+  --clr-dark-gray:hsl(235, 18%, 26%);
+  --clr-darker-gray:hsl(235, 18%, 26%);
+  --clr-gray:hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-primary: "Roboto", sans-serif;
+}
+
+/* Eric Meyer’s Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent base font size */
+html {
+  font-size: 100%;
+}
+
+/* Ensure images don’t have extra space below */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove link underlines */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure headings are not affected by base font size */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset the box model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Basic reset for form elements */
+input, textarea, select, button, optgroup, option {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  box-shadow: none;
+  border-radius: 0;
+  outline: none;
+}
+
+/* Reset specific to form controls */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=date],
+input[type=tel],
+input[type=url],
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  border: 1px solid #ccc; /* Default border style */
+  padding: 0.5em; /* Add padding for better appearance */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Remove default appearance for the button element */
+button, input[type=button], input[type=submit], input[type=reset] {
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc; /* Default border style */
+}
+
+/* Remove default styling for form controls */
+input:focus, textarea:focus, select:focus, button:focus {
+  border-color: #007bff; /* Focus border color */
+  outline: none;
+  box-shadow: 0 0 0 0.2em rgba(38, 143, 255, 0.25); /* Focus box-shadow */
+}
+
+/* Reset for links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Prevent extra space in the page */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, pre, hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure that all elements use the same box-sizing model */
+html {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-dark-gray);
+  color: var(--clr-dark-gray);
+}
+
+.display-none {
+  display: none;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.button {
+  color: var(--clr-white);
+  background-color: var(--clr-blue);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.button:hover {
+  background: linear-gradient(to right, #ff5379, #ff693e);
+  box-shadow: 0px 10px 15px rgba(255, 104, 62, 0.4039215686);
+}
+
+.form-group {
+  display: grid;
+  gap: 20px;
+}
+.form-group > * {
+  display: block;
+  width: 100%;
+}
+.form-group-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 900;
+}
+.form-group-labels-errorLabel {
+  color: var(--clr-orange);
+}
+.form-group input {
+  padding: 15px;
+  color: var(--clr-darker-gray);
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+.form-group input:focus, .form-group input:active {
+  border: 1px solid #999;
+}
+.form-group input.error-input {
+  background-color: #ffe8e6;
+  color: var(--clr-orange);
+  border-color: var(--clr-orange);
+}
+.form-group input.error-input::placeholder {
+  color: var(--clr-orange);
+}
+
+.newsletter-card {
+  background-color: white;
+  color: var(--clr-blue);
+  display: grid;
+}
+.newsletter-card__content {
+  display: grid;
+  gap: 30px;
+  padding: 40px 22px;
+}
+.newsletter-card__content h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.newsletter-card__content p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.newsletter-card__content ul {
+  font-weight: 500;
+}
+.newsletter-card__content ul li {
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-left: 30px;
+  position: relative;
+}
+.newsletter-card__content ul li::before {
+  content: url("/assets/images/icon-list.svg");
+  position: absolute;
+  top: 3px;
+  left: -30px;
+}
+
+@media (max-width: 600px) {
+  .newsletter-card {
+    height: 100vh;
+  }
+}
+.succes-card {
+  background-color: #fff;
+  color: var(--clr-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.succes-card h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.succes-card p {
+  font-weight: 400;
+}
+.succes-card button {
+  margin-top: auto;
+}
+.succes-card img {
+  width: 100px;
+  height: auto;
+  margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+  .succes-card {
+    padding-block: 50px;
+    max-height: 500px;
+    max-width: 500px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .newsletter-card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 850px;
+    padding: 30px;
+    gap: 30px;
+    border-radius: 30px;
+  }
+  .newsletter-card__content {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .wrapper {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

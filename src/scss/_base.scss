@@ -1,0 +1,33 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1rem;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-dark-gray);
+    color: var(--clr-dark-gray);
+}
+
+.display-none{
+    display: none;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+
+.button{
+    color: var(--clr-white);
+    background-color: var(--clr-blue);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    &:hover{
+        background: linear-gradient(to right,#ff5379,#ff693e);
+        box-shadow: 0px 10px 15px #ff683e67;
+    }
+}

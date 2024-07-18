@@ -1,0 +1,112 @@
+@use 'root';
+@use 'reset';
+@use 'base';
+@use 'form';
+
+
+.newsletter-card{
+    background-color: white;
+    color: var(--clr-blue);
+    display: grid;
+    &__content{
+        display: grid;
+        gap: 30px;
+        padding: 40px 22px;
+        & h1{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        & p{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        & ul{
+            font-weight: 500;
+            & li{
+                padding: 0;
+                margin: 0;
+                line-height: 1.7;
+                margin-top: 10px;
+                margin-left: 30px;
+                position: relative;
+                &::before{
+                    content: url('/assets/images/icon-list.svg');
+                    position: absolute;
+                    top: 3px;
+                    left: -30px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width : 600px) {
+    .newsletter-card{
+        height: 100vh;
+       
+    }
+}
+
+.succes-card{
+    background-color: #fff;
+    color: var(--clr-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    & h1{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    & p {
+        font-weight: 400;
+    }
+    & button{
+        margin-top: auto;
+    }
+    & img{
+        width: 100px;
+        height: auto;
+        margin-inline: auto;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width : 600px) {
+
+    .succes-card{
+        padding-block:50px ;
+        max-height: 500px;
+        max-width: 500px;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        
+    }
+    .newsletter-card{
+        grid-template-columns: 1fr 1fr;
+        max-width: 850px;
+        padding: 30px;
+        gap: 30px;
+        border-radius: 30px;
+        &__content{
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+    }
+    
+    .wrapper{
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+}
+
