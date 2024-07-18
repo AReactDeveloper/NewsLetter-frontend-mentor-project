@@ -21,7 +21,7 @@ submitBtn.addEventListener('click',e=>{
 
 dismisbtn.addEventListener('click',e=>{
     e.preventDefault()
-    window.location.href = '/'
+    window.location.href = 'https://areactdeveloper.github.io/NewsLetter-frontend-mentor-project'
 })
 
 function isValidEmail(email) {
